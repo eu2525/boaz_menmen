@@ -28,8 +28,8 @@ send_email = KubernetesPodOperator(
     task_id="send_email",
     startup_timeout_seconds=300,
     name="send_eamil",
-    namespace="airflow",  # Replace with your namespace
-    image="hsjindoc/boaz_practice:1.0",  # Replace with your Docker image
+    namespace="airflow",  
+    image="hsjindoc/boaz_practice:1.1",  
     env_vars={
         "USER_EMAIL": '{{ dag_run.conf["user_email"] }}',
         "USER_KEYWORD": '{{ dag_run.conf["user_keyword"] }}'
